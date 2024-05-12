@@ -30,6 +30,12 @@ class MyHomePageState extends State<HomePageState> {
     });
   }
 
+  void clearbutton() {
+    setState(() {
+      counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +56,9 @@ class MyHomePageState extends State<HomePageState> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("counter$counter"),
+              Text("counter  $counter"),
+              FloatingActionButton(
+                  child: Text("Clear"), onPressed: clearbutton),
             ],
           ),
         ),
