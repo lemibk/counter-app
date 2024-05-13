@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 void main() {
   runApp(
     const MaterialApp(
-      title: 'counter demo',
+      title: 'counter ',
       home: HomePageState(),
     ),
   );
@@ -42,21 +42,24 @@ class MyHomePageState extends State<HomePageState> {
       appBar: AppBar(
         title: const Text(
           'counter demo',
-          style: TextStyle(color: Colors.teal, fontSize: 30.3),
+          style: TextStyle(color: Colors.white, fontSize: 30.3),
         ),
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blue,
       ),
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/pic.jpg'),
+                image: AssetImage('images/calculator.jpg'),
                 scale: 1.0,
                 fit: BoxFit.cover)),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("counter  $counter"),
+              Text(
+                "counter  $counter",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
               FloatingActionButton(
                   child: Text("Clear"), onPressed: clearbutton),
             ],
